@@ -5,7 +5,7 @@ $step_color: #eaeaea;
 $step_color_passed: #7dc71b;
 $step_color_current: darken($step_color, 3);
 
-$offset_parent: -100px;
+$offset_parent: 0px;
 
 .layout-with-sidebar {
   display: flex;
@@ -115,6 +115,15 @@ $offset_parent: -100px;
     }
   }
 
+  @include media-query($on-palm) {
+    flex-direction: column;
+
+    aside.sidebar {
+      order: -1;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
 }
 
 section.progress {
